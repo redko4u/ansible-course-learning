@@ -1,0 +1,16 @@
+- name: variable from task level
+  hosts: localhost
+  vars:
+   Name: "VenkatReddy"
+   Age: "30"
+   Company: "Infosys"
+   Designation: "TA"
+   tasks:
+   - name: Printing task Variables
+     vars:
+      Name: "Divakar-Reddy"
+     ansible.builtin.debug:
+      msg: "hi i am {{Name}}, and my age is {{Age}} years, i am working in {{Company} as {{Designation}}"
+   - name: Printing play level variables
+     ansible.builtin.debug:
+      msg: "hi i am {{Name}}, and my age is {{Age}} years, i am working in {{Company} as {{Designation}}" 
