@@ -1,0 +1,10 @@
+- name: Workimg on Vairables
+  hosts: localhost
+  vars:
+   Name: "Venkat-Reddy"
+   Course: "Devops"
+   Company: "Infosys"
+  tasks:
+  - name: variables printing
+    ansible.buildin.debug:
+     msg: "Hi My Name is {{Name}}, I am Learning {{Course}}, I am working in {{Company}} as a Technology Analyst"
