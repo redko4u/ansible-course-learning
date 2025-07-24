@@ -6,5 +6,5 @@
    Company: "Infosys"
   tasks:
   - name: variables printing
-    ansible.buildin.debug:
+    ansible.builtin.debug:
      msg: "Hi My Name is {{Name}}, I am Learning {{Course}}, I am working in {{Company}} as a Technology Analyst"
