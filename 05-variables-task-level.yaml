@@ -14,3 +14,6 @@
    - name: Printing play level variables
      ansible.builtin.debug:
       msg: "hi i am {{Name}}, and my age is {{Age}} years, i am working in {{Company} as {{Designation}}" 
+
+# Message IMP :- when we are giving variables in task level ansible will check from task level variables and print those variables 
+# ansible ekkada aythe near variables vuntai o avi frist priority gha teesukoni avi print cestund i mean avi first execute avthai
