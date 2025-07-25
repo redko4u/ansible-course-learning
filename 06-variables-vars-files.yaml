@@ -1,0 +1,8 @@
+- name: variables from variables files
+  hosts: localhost
+  vars:
+    - vars.yaml
+  tasks:
+  - name: variables from variable files
+    ansible.builtin.debug
+    msg: "Hello iam {{Name}}, i am working in {{Company}}, i am having {{Exp}}."    
