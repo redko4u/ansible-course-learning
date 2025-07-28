@@ -1,0 +1,17 @@
+- name: conditions yaml
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: checking expense user there or not
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: true
+  - name: printing user output
+    ansible.builtin.debug:
+     msg: "User info : {{USER}}"
+  - name: creating user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0  #condition
+  - name: say hello
+    ansible.builtin.debug:
+     msg: "Say Hello"
