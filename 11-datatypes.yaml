@@ -1,0 +1,18 @@
+- name: datatypes
+  hosts: localhost
+  vars:
+  Courses: "Devops With AWS"
+  Tools: # lists
+  - Linux
+  - Shell
+  - Ansible
+  - Teraform
+  Experience: # maps and directory
+   Devops: 3
+   Aws: 2
+   Ansible: 2
+  RealProject: true # boolean
+  tasks:
+  - name: printinging list and maps
+    ansible.builtin.debug:
+      msg: "Hi i am venkat reddy i am learning {{Courses}} and in that course i covered {{Tools}}, and i having an {{Experience}} in {{RealProject}}"
